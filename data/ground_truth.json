@@ -1,0 +1,28 @@
+{
+  "seed": 20261027,
+  "injected_defects": {
+    "customers_exact_duplicate_rows": 50,
+    "customers_missing_email": 150,
+    "customers_malformed_email": 100,
+    "customers_missing_signup_date": 100,
+    "customers_bad_signup_date": 100,
+    "customers_invalid_age": 50,
+    "customers_duplicate_email_diff_id": 40,
+    "products_duplicate_sku": 5,
+    "products_missing_price": 10,
+    "products_negative_price": 5,
+    "orders_before_signup": 100,
+    "orders_exact_duplicate_rows": 150,
+    "orders_orphan_customer": 300,
+    "orders_orphan_product": 200,
+    "orders_bad_amount": 200,
+    "orders_bad_order_date": 150,
+    "orders_bad_quantity": 100,
+    "orders_duplicate_order_id": 75
+  },
+  "raw_rows": {
+    "customers": 5050,
+    "orders": 15150,
+    "products": 500
+  }
+}

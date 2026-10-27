@@ -1,0 +1,133 @@
+{
+  "raw_rows": {
+    "customers": 5050,
+    "orders": 15150,
+    "products": 500
+  },
+  "clean_rows": {
+    "customers": 4479,
+    "orders": 11043,
+    "products": 480
+  },
+  "quarantined_rows": {
+    "customers": 571,
+    "orders": 4107,
+    "products": 20
+  },
+  "quarantine_reasons": {
+    "orphan_customer_id": 1744,
+    "invalid_status": 1022,
+    "orphan_product_id": 672,
+    "missing_or_invalid_email": 244,
+    "missing_or_bad_signup_date": 194,
+    "exact_duplicate_row": 176,
+    "missing_or_nonpositive_amount": 163,
+    "missing_or_bad_order_date": 119,
+    "duplicate_order_id": 88,
+    "missing_or_nonpositive_quantity": 83,
+    "order_before_signup": 80,
+    "invalid_age": 45,
+    "duplicate_email": 38,
+    "missing_or_nonpositive_price": 15,
+    "duplicate_customer_id": 10,
+    "duplicate_sku": 5
+  },
+  "quality_scores": {
+    "before": {
+      "completeness": 0.9976789437109104,
+      "validity": 0.9843044189852701,
+      "uniqueness": 0.9867632850241546,
+      "consistency": 0.4519323671497585,
+      "referential_integrity": 0.9834983498349835,
+      "overall": 0.8808354729410155
+    },
+    "after": {
+      "completeness": 1.0,
+      "validity": 1.0,
+      "uniqueness": 1.0,
+      "consistency": 1.0,
+      "referential_integrity": 1.0,
+      "overall": 1.0
+    }
+  },
+  "sql_validation_gate": [
+    {
+      "check": "customers_null_email",
+      "violations": 0
+    },
+    {
+      "check": "customers_duplicate_customer_id",
+      "violations": 0
+    },
+    {
+      "check": "customers_duplicate_email",
+      "violations": 0
+    },
+    {
+      "check": "customers_bad_age",
+      "violations": 0
+    },
+    {
+      "check": "customers_bad_country",
+      "violations": 0
+    },
+    {
+      "check": "customers_bad_signup_date",
+      "violations": 0
+    },
+    {
+      "check": "products_duplicate_product_id",
+      "violations": 0
+    },
+    {
+      "check": "products_duplicate_sku",
+      "violations": 0
+    },
+    {
+      "check": "products_bad_price",
+      "violations": 0
+    },
+    {
+      "check": "products_bad_category",
+      "violations": 0
+    },
+    {
+      "check": "orders_duplicate_order_id",
+      "violations": 0
+    },
+    {
+      "check": "orders_bad_amount",
+      "violations": 0
+    },
+    {
+      "check": "orders_bad_quantity",
+      "violations": 0
+    },
+    {
+      "check": "orders_bad_status",
+      "violations": 0
+    },
+    {
+      "check": "orders_bad_order_date",
+      "violations": 0
+    },
+    {
+      "check": "orders_orphan_customer",
+      "violations": 0
+    },
+    {
+      "check": "orders_orphan_product",
+      "violations": 0
+    },
+    {
+      "check": "orders_before_signup",
+      "violations": 0
+    }
+  ],
+  "total_quarantined": 4698,
+  "retention_pct": {
+    "customers": 88.69,
+    "orders": 72.89,
+    "products": 96.0
+  }
+}
